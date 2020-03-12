@@ -21,7 +21,7 @@ public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome, email, phone, password;
+	private String name, email, phone, password;
 	
 	@OneToMany(mappedBy = "client")
 	@JsonIgnore
@@ -34,7 +34,7 @@ public class User implements Serializable{
 	public User(Long id, String nome, String email, String phone, String password) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = nome;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
@@ -49,11 +49,11 @@ public class User implements Serializable{
 	}
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.name = nome;
 	}
 
 	public String getEmail() {
